@@ -55,7 +55,7 @@ void listflights()
 
 }
 
-void filterflights()
+/*void filterflights()
 {
 	int c;
 	cout<<"Enter filter parameter: 1.Destination 2.Source 3. Price: ";
@@ -99,7 +99,7 @@ void filterflights()
 			break;
 			
 	}
-}
+}*/
 
 void option(int opt)
 {
