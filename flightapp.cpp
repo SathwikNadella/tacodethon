@@ -109,8 +109,8 @@ void option(int opt)
 			break;
 		case 2: listflights();
 			break;
-		case 3: filterflights();
-			break;
+		//case 3: filterflights();
+		//	break;
 
 	}
 }
