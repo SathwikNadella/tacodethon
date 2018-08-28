@@ -1,5 +1,5 @@
 #include<iostream>
-#include<string>
+#include<cstring>
 using namespace std;
 int fnum[100]={0},price[100]={0};
 char aname[100][50],source[100][50],dest[100][50],arrtime[100][50],arrdate[100][50],depdate[100][50],deptime[100][50];
@@ -55,7 +55,7 @@ void listflights()
 
 }
 
-/*void filterflights()
+void filterflights()
 {
 	int c;
 	cout<<"Enter filter parameter: 1.Destination 2.Source 3. Price: ";
@@ -64,27 +64,21 @@ void listflights()
 	{
 		char inp[50];
 		int inp1;
-		string s1,s2;
 		case 1: cout<<"Enter Destination: ";
 			cin>>inp;
-			
-			s1=inp;
 			cout<<"Flightno.  Destination   DepartureDate   ArrivalDate \n";
 			for(int i=0;i<n;i++)
 			{
-				s2=dest[i];
-				if(compareFunction(s1, s2)==0)
+				if(strcmp(inp,dest[i])==0)
 					cout<<fnum[i]<<"\t"<<dest[i]<<"\t"<<depdate[i]<<"\t"<<arrdate[i]<<endl;
 			}
 			break;
 		case 2: cout<<"Enter Source: ";
 			cin>>inp;
-			s1=inp;
 			cout<<"Flightno.  Source   DepartureDate   ArrivalDate \n";
 			for(int i=0;i<n;i++)
-			{	
-				s2=source[i];
-				if(compareFunction(s1, s2)==0)
+			{
+				if(strcmp(inp,source[i])==0)
 					cout<<fnum[i]<<"\t"<<source[i]<<"\t"<<depdate[i]<<"\t"<<arrdate[i]<<endl;
 			}
 			break;
@@ -99,7 +93,7 @@ void listflights()
 			break;
 			
 	}
-}*/
+}
 
 void option(int opt)
 {
@@ -109,8 +103,8 @@ void option(int opt)
 			break;
 		case 2: listflights();
 			break;
-		//case 3: filterflights();
-		//	break;
+		case 3: filterflights();
+			break;
 
 	}
 }
